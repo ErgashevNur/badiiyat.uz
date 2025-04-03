@@ -10,7 +10,7 @@ function Home() {
     <>
       <Navbar className="border-b border-[#292929]" />
       <HeaderCorusel />
-      <SearchSection className="relative bottom-[55px] left-[230px] flex" />
+      <SearchSection className="relative bottom-[45px] mx-auto flex" />
       <Kategoriya />
       <BooksList />
       {/* <UpdateBook /> */}

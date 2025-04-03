@@ -1,11 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* globals.css yoki tailwind.css */
 body {
   background-color: #191919;
   color: white;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dancing-script-v25-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-serif-v18-latin-regular.woff2") format("woff2");
 }
 
 @layer base {

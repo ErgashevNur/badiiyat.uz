@@ -12,28 +12,43 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 function Navbar({ className }) {
   const [isUp, setIsUp] = useState(false);
 
+  const menus = [
+    {
+      txt: "Bosh sahifa",
+      url: "/",
+    },
+    {
+      txt: "Nasr",
+      url: "/",
+    },
+    {
+      txt: "Nazm",
+      url: "/",
+    },
+    {
+      txt: "Maqola",
+      url: "/",
+    },
+    {
+      txt: "Forum",
+      url: "/",
+    },
+  ];
+
   return (
     <div
-      className={`${className} mt-[25px] flex items-center justify-between pb-[29px]`}
+      className={`${className} mt-[25px] flex items-center justify-between pb-[25px]`}
     >
-      <h1 className="ml-[81px] mr-96">badiiyat</h1>
+      <h1 className="font-dancing ml-[81px] mr-96 text-[25px] uppercase text-[#C9AC8C]">
+        <a href="/">badiiyat</a>
+      </h1>
 
       <ul className="flex items-center gap-[35px]">
-        <li>
-          <a href="/">Bosh sahifa</a>
-        </li>
-        <li>
-          <a href="/">Nasr</a>
-        </li>
-        <li>
-          <a href="/">Nazm</a>
-        </li>
-        <li>
-          <a href="/">Maqola</a>
-        </li>
-        <li>
-          <a href="/">Forum</a>
-        </li>
+        {menus.map((menu, index) => (
+          <li className="mb-[25px] hover:underline" key={index}>
+            <a href={menu.url}>{menu.txt}</a>
+          </li>
+        ))}
       </ul>
 
       <div className="mr-[81px]">

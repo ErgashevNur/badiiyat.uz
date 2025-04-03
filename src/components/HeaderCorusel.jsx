@@ -55,7 +55,7 @@ export function HeaderCorusel() {
 
                   {/* Matn joylashuvi */}
                   <div className="absolute left-10 top-10 text-left font-serif text-[#333333]">
-                    <h2 className="w-[337px] rounded-md bg-white/50 p-3 text-[61px] leading-tight backdrop-blur-sm">
+                    <h2 className="font-dancing w-[400px] rounded-md bg-white/50 p-1 text-[68px] uppercase leading-tight backdrop-blur-sm">
                       {slide.txt}
                     </h2>
                   </div>
