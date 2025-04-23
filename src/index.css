@@ -8,17 +8,17 @@ body {
 
 @font-face {
   font-display: swap;
-  font-family: "Dancing Script";
+  font-family: "Rotterburg Stylish";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/dancing-script-v25-latin-regular.woff2") format("woff2");
+  src: url("@/fonts/Rotterburg Display Font.otf") format("otf");
 }
 @font-face {
   font-display: swap;
-  font-family: "PT Serif";
+  font-family: "SteinbeckFC-Reg";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-serif-v18-latin-regular.woff2") format("woff2");
+  src: url("@/fonts/SteinbeckFC-Reg.otf") format("otf");
 }
 
 @layer base {
