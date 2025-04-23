@@ -1,44 +1,49 @@
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-function BooksList() {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
+function BooksList({ books, loading }) {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("https://library-project-6agw.onrender.com/get_books")
-      .then((res) => res.json())
-      .then((data) => {
-        setBooks(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("API xatosi:", error);
-        setLoading(false);
-      });
-  }, []);
+  if (loading) {
+    return (
+      <Button className="mx-auto mt-12 flex items-center" disabled>
+        <Loader2 className="animate-spin" />
+        Malumotlar yuklanmoqda...
+      </Button>
+    );
+  }
 
-  if (loading) return <p>Yuklanmoqda...</p>;
+  if (books?.length === 0) {
+    return (
+      <div className="mt-12 text-center">
+        <h2 className="text-lg font-semibold">Hech qanday kitob topilmadi.</h2>
+      </div>
+    );
+  }
 
   return (
-    <div className="p-5">
-      <ul className="mx-auto grid grid-cols-6 space-y-2">
-        {books.map((book) => (
-          <li key={book._id} className="rounded-lg p-4 shadow-md">
-            <img
-              src={book.img}
-              alt={book.title}
-              className="h-60 w-full rounded-lg object-cover"
-            />
-            <h3 className="font-dancing text-[20px] font-normal uppercase">
-              {book.title}
-            </h3>
-            <p className="text-[12px] font-light capitalize text-gray-600">
-              {book.author}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="mt-5 grid grid-cols-5 justify-center gap-5 space-y-2">
+      {books?.map((book) => (
+        <li
+          key={book?._id}
+          className="w-full transform cursor-pointer rounded-lg p-4 shadow-md transition-transform hover:scale-105"
+          onClick={() => navigate(`/book/${book._id}`)}
+        >
+          <img
+            src={book?.img}
+            alt={book?.title}
+            className="h-60 w-full rounded-lg object-cover"
+          />
+          <h3 className="mt-2 font-dancing text-[20px] font-normal uppercase">
+            {book?.title}
+          </h3>
+          <p className="text-[12px] font-light capitalize text-gray-600">
+            {book?.author}
+          </p>
+        </li>
+      ))}
+    </ul>
   );
 }
 

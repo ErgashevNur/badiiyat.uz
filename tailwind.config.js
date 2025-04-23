@@ -10,8 +10,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        dancing: ['"Dancing Script"', "cursive"],
-        steinbeck: ['"PT Serif"', "serif"],
+        dancing: ['"Rotterburg Stylish"', "sans-serif"],
+        asd: ['"SteinbeckFC-Reg"'],
       },
       colors: {
         background: "hsl(var(--background))",

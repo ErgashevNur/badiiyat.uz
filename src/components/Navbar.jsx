@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import Logout from "./Logout";
 
 function Navbar({ className }) {
   const [isUp, setIsUp] = useState(false);
@@ -39,7 +40,7 @@ function Navbar({ className }) {
     <div
       className={`${className} mt-[25px] flex items-center justify-between pb-[25px]`}
     >
-      <h1 className="font-dancing ml-[81px] mr-96 text-[25px] uppercase text-[#C9AC8C]">
+      <h1 className="ml-[81px] mr-96 font-dancing text-[25px] uppercase text-[#C9AC8C]">
         <a href="/">badiiyat</a>
       </h1>
 
@@ -67,9 +68,12 @@ function Navbar({ className }) {
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Billing</DropdownMenuItem>
-            <DropdownMenuItem>Team</DropdownMenuItem>
-            <DropdownMenuItem>Subscription</DropdownMenuItem>
+            <DropdownMenuItem>Security</DropdownMenuItem>
+            <DropdownMenuItem>
+              <button>
+                <Logout />
+              </button>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
