@@ -23,11 +23,11 @@ function BooksList({ books, loading }) {
   }
 
   return (
-    <ul className="mt-5 grid grid-cols-5 justify-center gap-5 space-y-2">
+    <ul className="mt-5 grid grid-cols-6 justify-center gap-5 space-y-2 px-20">
       {books?.map((book) => (
         <li
           key={book?._id}
-          className="w-full transform cursor-pointer rounded-lg p-4 shadow-md transition-transform hover:scale-105"
+          className="mt-2 w-[200px] transform cursor-pointer overflow-hidden rounded-lg p-4 shadow-md transition-transform hover:scale-105"
           onClick={() => navigate(`/book/${book._id}`)}
         >
           <img

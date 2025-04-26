@@ -11,14 +11,14 @@ body {
   font-family: "Rotterburg Stylish";
   font-style: normal;
   font-weight: 400;
-  src: url("@/fonts/Rotterburg Display Font.otf") format("otf");
+  src: url("../fonts/Rotterburg\ Display\ Font.otf") format("opentype");
 }
 @font-face {
   font-display: swap;
   font-family: "SteinbeckFC-Reg";
   font-style: normal;
   font-weight: 400;
-  src: url("@/fonts/SteinbeckFC-Reg.otf") format("otf");
+  src: url("../fonts/SteinbeckFC-Reg.otf") format("otf");
 }
 
 @layer base {
